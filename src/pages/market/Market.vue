@@ -17,8 +17,8 @@
 </template>
 
 <script>
-  import Tab01 from "../../components/Tab01";
-  import Tab02 from "../../components/Tab02";
+  import Tab01 from "../../components/Home01";
+  import Tab02 from "../../components/Home02";
 
   export default {
     name: "Market",

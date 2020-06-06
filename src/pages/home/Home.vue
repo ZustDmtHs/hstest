@@ -1,12 +1,12 @@
 <!--自选页面-->
 <template>
   <div>
-    <div>
-      <div>
+    <div style="margin-bottom: 15px">
         <span v-for="(tab,index) in tabs"
               :class="{cur:iscur===index,curcolor:iscur===index}"
-              @click="tabChange('tab' + '0'+(index + 1),index)">{{tab.tabName}}</span>
-      </div>
+              @click="tabChange('home' + '0'+(index + 1),index)">{{tab.tabName}}</span>
+    </div>
+    <div>
       <keep-alive>
         <component :is="tabView"></component>
       </keep-alive>
@@ -17,23 +17,23 @@
 </template>
 
 <script>
-  import Tab01 from "../../components/Tab01";
-  import Tab02 from "../../components/Tab02";
+  /*添加组件*/
+  import Home01 from "../../components/Home01";
+  import Home02 from "../../components/Home02";
 
   export default {
     name: "Home",
-    components: {Tab01, Tab02},
+    components: {Home01, Home02},
     data() {
       return {
         iscur: 0,
         tabView: 'Tab01',
-        tabs: [
-          {
-            tabName: "场内期权"
-          },
-          {
-            tabName: "科创板"
-          }]
+        /*顶部标签切换*/
+        tabs: [{
+          tabName: "场内期权"
+        }, {
+          tabName: "科创板"
+        }]
       }
     },
     methods: {
@@ -54,7 +54,8 @@
     border: #818181 1px solid;
     padding: 5px;
   }
-  .curcolor{
+
+  .curcolor {
     background-color: #cccccc;
   }
 </style>
