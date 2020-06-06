@@ -1,12 +1,14 @@
-<!--自选页面-->
+<!--行情页面-->
 <template>
   <div>
-    <div style="margin-bottom: 15px">
+    <div>
+      <div class="flex align-center justify-center" style="margin: 20px 0 5px 0">
         <span v-for="(tab,index) in tabs"
               :class="{cur:iscur===index,curcolor:iscur===index}"
-              @click="tabChange('home' + '0'+(index + 1),index)">{{tab.tabName}}</span>
-    </div>
-    <div>
+              @click="tabChange('Home' + '0'+(index + 1),index)"
+              style="padding: 5px 10px">{{tab.tabName}}</span>
+        <img :src="imgUrl" width="25px" style="margin-left: 150px;position: absolute">
+      </div>
       <keep-alive>
         <component :is="tabView"></component>
       </keep-alive>
@@ -17,7 +19,6 @@
 </template>
 
 <script>
-  /*添加组件*/
   import Home01 from "../../components/Home01";
   import Home02 from "../../components/Home02";
 
@@ -28,12 +29,14 @@
       return {
         iscur: 0,
         tabView: 'Home01',
-        /*顶部标签切换*/
-        tabs: [{
-          tabName: "场内期权"
-        }, {
-          tabName: "科创板"
-        }]
+        imgUrl: require("@/assets/search.png"),
+        tabs: [
+          {
+            tabName: "场内期权"
+          },
+          {
+            tabName: "科创板"
+          }]
       }
     },
     methods: {
@@ -47,9 +50,6 @@
 </script>
 
 <style scoped>
-  a:active {
-    color: green;
-  }
   span {
     border: #818181 1px solid;
     padding: 5px;
