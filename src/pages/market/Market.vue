@@ -2,10 +2,12 @@
 <template>
   <div>
     <div>
-      <div>
+      <div class="flex align-center justify-center" style="margin: 20px 0 5px 0">
         <span v-for="(tab,index) in tabs"
               :class="{cur:iscur===index,curcolor:iscur===index}"
-              @click="tabChange('tab' + '0'+(index + 1),index)">{{tab.tabName}}</span>
+              @click="tabChange('Market' + '0'+(index + 1),index)"
+              style="padding: 5px 10px">{{tab.tabName}}</span>
+        <img :src="imgUrl" width="25px" style="margin-left: 150px;position: absolute">
       </div>
       <keep-alive>
         <component :is="tabView"></component>
@@ -17,16 +19,17 @@
 </template>
 
 <script>
-  import Tab01 from "../../components/Tab01";
-  import Tab02 from "../../components/Tab02";
+  import Market01 from "../../components/Market01";
+  import Market02 from "../../components/Market02";
 
   export default {
     name: "Market",
-    components: {Tab01, Tab02},
+    components: {Market01, Market02},
     data() {
       return {
         iscur: 0,
-        tabView: 'Tab01',
+        tabView: 'Market01',
+        imgUrl: require("@/assets/search.png"),
         tabs: [
           {
             tabName: "场内期权"
@@ -51,7 +54,8 @@
     border: #818181 1px solid;
     padding: 5px;
   }
-  .curcolor{
+
+  .curcolor {
     background-color: #cccccc;
   }
 </style>

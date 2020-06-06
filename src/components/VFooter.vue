@@ -3,7 +3,7 @@
   <div style="display: flex;justify-content: center">
     <ul>
       <li><router-link to="/home" tag="a" active-class="curtab">自选</router-link></li>
-      <li><router-link to="/market" tag="a" active-class="curtab">行值</router-link></li>
+      <li><router-link to="/market" tag="a" active-class="curtab">行情</router-link></li>
       <li><router-link to="/trade" tag="a" active-class="curtab">交易</router-link></li>
       <li><router-link to="" tag="a" active-class="">我的</router-link></li>
     </ul>
