@@ -27,7 +27,7 @@
     data() {
       return {
         iscur: 0,
-        tabView: 'Tab01',
+        tabView: 'Home01',
         /*顶部标签切换*/
         tabs: [{
           tabName: "场内期权"
