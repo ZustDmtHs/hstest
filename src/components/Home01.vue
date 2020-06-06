@@ -1,0 +1,81 @@
+<!--场内期权-->
+<template>
+    <div style="display: flex;justify-content: center;align-items: center;margin-top: 15px">
+      <table style="width: 100%;">
+        <thead>
+          <tr>
+            <th>名称代码</th>
+            <th>最新</th>
+            <th>涨幅</th>
+            <th>涨跌</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in homeList01" class="home_tr">
+            <td>
+              {{item.name}}
+              <span>{{item.lable}}</span>
+            </td>
+            <td :style="{color:(item.update_condition>0?'red':'green')}">{{item.update_condition}}</td>
+            <td :style="{color:(item.range_increase>0?'red':'green')}">{{item.range_increase}}%</td>
+            <td :style="{color:(item.range_fail>0?'red':'green')}">{{item.range_fail}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</template>
+
+<script>
+    export default {
+        name: "Home01",
+      data(){
+          return{
+            homeList01:[{
+              name:'50ETF的5月2750',
+              lable:'10001203',
+              update_condition:'0.0066',
+              range_increase:'-66.47',
+              range_fail:'2.7500'
+            },{
+              name:'50ETF的5月2750',
+              lable:'10001204',
+              update_condition:'0.0066',
+              range_increase:'0.47',
+              range_fail:'-2.7500'
+            },{
+              name:'50ETF的5月2750',
+              lable:'10001203',
+              update_condition:'-0.0099',
+              range_increase:'-6.47',
+              range_fail:'-2.7500'
+            },{
+              name:'50ETF的5月2750',
+              lable:'10001204',
+              update_condition:'0.678',
+              range_increase:'-47.47',
+              range_fail:'2.7500'
+            }]
+          }
+      }
+    }
+</script>
+
+<style scoped>
+  table{
+    border-collapse: collapse;
+  }
+  thead{
+    border: black 1px solid;
+  }
+  .home_tr{
+    height: 50px;
+    font-size: 16px;
+    border-bottom: rgba(129,129,129,0.3) 1px solid;
+    text-align: left;
+  }
+  span{
+    font-size: 14px;
+    display: block;
+  }
+
+</style>
