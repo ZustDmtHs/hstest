@@ -1,9 +1,9 @@
 <!--场内期权-->
 <template>
-    <div style="display: flex;justify-content: center;align-items: center;margin-top: 15px">
+    <div class="tabla_div">
       <table style="width: 100%;">
         <thead>
-          <tr>
+          <tr style="height: 40px">
             <th>名称代码</th>
             <th>最新</th>
             <th>涨幅</th>
@@ -16,9 +16,9 @@
               {{item.name}}
               <span>{{item.lable}}</span>
             </td>
-            <td :style="{color:(item.update_condition>0?'red':'green')}">{{item.update_condition}}</td>
-            <td :style="{color:(item.range_increase>0?'red':'green')}">{{item.range_increase}}%</td>
-            <td :style="{color:(item.range_fail>0?'red':'green')}">{{item.range_fail}}</td>
+            <td>{{item.update_condition}}</td>
+            <td>{{item.range_increase}}%</td>
+            <td>{{item.range_fail}}</td>
           </tr>
         </tbody>
       </table>
@@ -61,14 +61,25 @@
 </script>
 
 <style scoped>
+  .tabla_div{
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px
+  }
   table{
     border-collapse: collapse;
   }
   thead{
-    border: black 1px solid;
+    border-bottom: rgba(129,129,129,0.3) 1px solid;
+    text-align: center;
+  }
+  td{
+
   }
   .home_tr{
-    height: 50px;
+    height: 60px;
     font-size: 16px;
     border-bottom: rgba(129,129,129,0.3) 1px solid;
     text-align: left;
@@ -76,6 +87,12 @@
   span{
     font-size: 14px;
     display: block;
+  }
+  td:nth-child(2),td:nth-child(3){
+    color: green;
+  }
+  td:nth-child(4){
+    color: skyblue;
   }
 
 </style>

@@ -1,9 +1,9 @@
 <!--科创板-->
 <template>
-  <div style="display: flex;justify-content: center;align-items: center;margin-top: 15px">
+  <div class="table_div">
     <table style="width: 100%;">
       <thead>
-      <tr>
+      <tr style="height: 40px">
         <th>名称代码</th>
         <th>最新</th>
         <th>涨幅</th>
@@ -97,15 +97,22 @@
 </script>
 
 <style scoped>
+  .table_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    background-color: #F5F5F5;
+  }
   table{
     border-collapse: collapse;
   }
   thead{
-    border: black 1px solid;
+    border-bottom: rgba(129,129,129,0.3) 1px solid;
     text-align: center;
   }
   .home_tr{
-    height: 50px;
+    height: 60px;
     font-size: 16px;
     border-bottom: rgba(129,129,129,0.3) 1px solid;
     text-align: left;
