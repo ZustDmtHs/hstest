@@ -1,4 +1,4 @@
-<!--科创板-->
+<!--自选页面科创板模块-->
 <template>
   <div class="table_div">
     <table style="width: 100%;">
@@ -12,7 +12,7 @@
       </thead>
       <tbody>
       <tr v-for="item in homeList02" class="home_tr">
-        <td >
+        <td>
           {{item.name}}
           <div>
             <span style="background-color: sandybrown">{{item.mark}}</span>
@@ -31,65 +31,65 @@
 <script>
   export default {
     name: "Home02",
-    data(){
-      return{
-        homeList02:[{
-          name:'东方国信',
-          lable:'300166',
-          update_condition:'12.40',
-          range_increase:'+1.72',
-          range_fail:'0.21'
-        },{
-          name:'科锐国际',
-          mark:'优',
-          lable:'300166',
-          update_condition:'-884.96',
-          range_increase:'-2.41',
-          range_fail:'-21.83'
-        },{
-          name:'贵州茅台',
-          mark:'优',
-          lable:'300166',
-          update_condition:'12.40',
-          range_increase:'+1.72',
-          range_fail:'0.21'
-        },{
-          name:'中国平安',
-          mark:'优',
-          lable:'300166',
-          update_condition:'77.87',
-          range_increase:'-1.55',
-          range_fail:'-1.23'
-        },{
-          name:'宁波银行',
-          lable:'300166',
-          update_condition:'12.40',
-          range_increase:'+1.72',
-          range_fail:'0.21'
-        },{
-          name:'工商银行',
-          lable:'300166',
-          update_condition:'34.51',
-          range_increase:'-2.38',
-          range_fail:'-0.84'
-        },{
-          name:'平治信息',
-          lable:'300166',
-          update_condition:'34.51',
-          range_increase:'-2.38',
-          range_fail:'-0.84'
-        },{
-          name:'欧派家居',
-          lable:'300166',
-          update_condition:'34.51',
-          range_increase:'-2.38',
-          range_fail:'-0.84'
-        },{
-          name:'尚品宅家',
-          lable:'300166',
-          update_condition:'34.51',
-          range_increase:'-2.38',
-          range_fail:'-0.84'
+    data() {
+      return {
+        homeList02: [{
+          name: '东方国信',
+          lable: '300166',
+          update_condition: '12.40',
+          range_increase: '+1.72',
+          range_fail: '0.21'
+        }, {
+          name: '科锐国际',
+          mark: '优',
+          lable: '300166',
+          update_condition: '-884.96',
+          range_increase: '-2.41',
+          range_fail: '-21.83'
+        }, {
+          name: '贵州茅台',
+          mark: '优',
+          lable: '300166',
+          update_condition: '12.40',
+          range_increase: '+1.72',
+          range_fail: '0.21'
+        }, {
+          name: '中国平安',
+          mark: '优',
+          lable: '300166',
+          update_condition: '77.87',
+          range_increase: '-1.55',
+          range_fail: '-1.23'
+        }, {
+          name: '宁波银行',
+          lable: '300166',
+          update_condition: '12.40',
+          range_increase: '+1.72',
+          range_fail: '0.21'
+        }, {
+          name: '工商银行',
+          lable: '300166',
+          update_condition: '34.51',
+          range_increase: '-2.38',
+          range_fail: '-0.84'
+        }, {
+          name: '平治信息',
+          lable: '300166',
+          update_condition: '34.51',
+          range_increase: '-2.38',
+          range_fail: '-0.84'
+        }, {
+          name: '欧派家居',
+          lable: '300166',
+          update_condition: '34.51',
+          range_increase: '-2.38',
+          range_fail: '-0.84'
+        }, {
+          name: '尚品宅家',
+          lable: '300166',
+          update_condition: '34.51',
+          range_increase: '-2.38',
+          range_fail: '-0.84'
         },]
       }
     }
@@ -97,29 +97,31 @@
 </script>
 
 <style scoped>
-  .table_div{
+  .table_div {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 15px;
     background-color: #F5F5F5;
   }
-  table{
+
+  table {
     border-collapse: collapse;
   }
-  thead{
-    border-bottom: rgba(129,129,129,0.3) 1px solid;
+
+  thead {
+    border-bottom: rgba(129, 129, 129, 0.3) 1px solid;
     text-align: center;
   }
-  .home_tr{
+
+  .home_tr {
     height: 60px;
     font-size: 16px;
-    border-bottom: rgba(129,129,129,0.3) 1px solid;
+    border-bottom: rgba(129, 129, 129, 0.3) 1px solid;
     text-align: left;
   }
-  span{
+
+  span {
     font-size: 14px;
     /*display: block;*/
   }
-
 </style>

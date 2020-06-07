@@ -2,15 +2,15 @@
 <template>
   <div>
     <div>
-      <div class="flex align-center justify-center" style="margin: 20px 0 5px 0">
+      <div class="flex align-center justify-center nav">
         <span v-for="(tab,index) in tabs"
               :class="{cur:iscur===index,curcolor:iscur===index}"
               @click="tabChange('Market' + '0'+(index + 1),index)"
               style="padding: 5px 10px">{{tab.tabName}}</span>
-        <img :src="imgUrl" width="25px" style="margin-left: 150px;position: absolute">
+        <img :src="imgUrl" width="25px" style="margin-left:35%;position: absolute">
       </div>
       <keep-alive>
-        <component :is="tabView"></component>
+        <component :is="tabView" style="margin-bottom: 50px"></component>
       </keep-alive>
     </div>
     <v-footer></v-footer>
