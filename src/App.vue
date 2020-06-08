@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="app">
     <router-view/>
   </div>
 </template>
@@ -11,6 +11,10 @@
 </script>
 
 <style>
+  body {
+    margin: 0 8px;
+  }
+
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -19,6 +23,13 @@
   }
 
   /*公共样式*/
+
+  .nav {
+    top: 0;
+    position: sticky;
+    height: 50px;
+    background-color: white
+  }
 
   .flex {
     display: flex;
